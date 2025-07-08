@@ -1,0 +1,49 @@
+---
+title: "Security"
+description: "Description of your new file."
+---
+
+## Data protection and infrastructure
+
+All customer data is hosted on enterprise-grade AWS infrastructure within the United States, and isolated by organization.  Each project has separate security and permissions within an organization.  Data is encrypted in transit and at rest.  
+
+We support single sign-on (SSO) via your organization directory, as well as secure connections to data platforms. 
+
+We support a choice of large language models to use when processing data and do not use your data to train these models. By default, we use OpenAI models via the OpenAI API, and we offer the option to use other LLMs including ones hosted by your organization. We use LiteLLM as a proxy to support model routing.
+
+## Access controls and internal safeguards
+
+Only essential engineering and support staff have production access. Every access event is logged and monitored. Engineering and support staff do not have access to customer data unless explicitly granted permission by the customer.  
+
+We require multi-factor authentication required for all production systems, have role-based access controls, and store an audit log of all administrative actions.
+
+## Comping soon
+- SOC 1 & SOC 2
+- Backups and recovery
+- Automated testing
+
+## Data Flow Diagram
+
+[needed] - includes what LLMs we use, how we secure data, etc.
+
+## Q & A
+
+### How does Surfboard secure my data in transit and at rest?
+
+All data is protected with 256-bit AES encryption at rest and TLS 1.2\+ in transit. Encryption keys are managed through AWS KMS with automatic rotation. 
+
+### Does Surfboard ever use or share my data to train its AI models?
+
+No. Your content remains private: it is not used to train foundation models, and never sold or exposed to third-party providers. Usage telemetry is fully anonymized and stripped of customer payloads.
+
+### Which compliance certifications does Surfboard hold?
+
+We plan to support SOC 2 Type I attestation and align with GDPR and CCPA requirements for EU and US residents. 
+
+### Does Surfboard support enterprise SSO and granular role-based access controls?
+
+Absolutely. We integrate with any SAML 2.0 or OIDC identity provider (Okta, Azure AD, Google Workspace, Ping, etc.). Fine-grained roles, MFA enforcement, and immutable audit logs give admins complete visibility and control.
+
+### Can we deploy Surfboard inside our own AWS VPC for added isolation?
+
+Not at this time. Today customers use our multi-tenant, hardened AWS environment.
