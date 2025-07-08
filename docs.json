@@ -7,7 +7,7 @@
     "light": "#07C983",
     "dark": "#15803D"
   },
-  "favicon": "/favicon.png",
+  "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
       {
@@ -70,7 +70,7 @@
         {
           "anchor": "API Reference",
           "href": "https://www.artemis-works.com",
-          "icon": "cursor"
+          "icon": "code"
         }
       ]
     }
